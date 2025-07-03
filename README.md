@@ -1,15 +1,15 @@
-# SCMC-Net
+# MED-Net
 
 ## 0. Abstract
 
-Due to scale variation, fuzzy boundaries, and hair interference, achieving precise skin lesion segmentation is extremely challenging. Some existing SSM-based skin lesion segmentation methods rely solely on SSM or simply combine conventional convolution with SSM as the network backbone, but these approaches often fail to fully exploit prior information and have limited ability to model foreground objects. To address these issues, we propose a novel network that embeds prior information into standard convolutions to extract edge and intensity information and integrates a self-calibrated channel attention mechanism to enhance the network’s ability to recognize foreground objects. This design improves segmentation performance on complex structures. Experiments on three benchmark skin lesion segmentation datasets demonstrate that our method consistently outperforms state-of-the-art approaches across multiple evaluation metrics, proving its robustness and effectiveness in tackling key segmentation challenges. Our code is available at https://github.com/szz2025/SCMC-Net.
+With the widespread application of the Kolmogorov-Arnold Network (KAN) framework in computer vision, KAN-based models have made remarkable progress in the field of medical image segmentation. However, these models do not always outperform models based on convolutional neural networks or Mamba. This limitation mainly stems from the fact that most existing KAN-based studies tend to focus on a single visual encoding strategy, while ignoring the advantages of integrating multiple visual encoding strategies. Secondly, most existing methods use max pooling and average pooling operations, which can effectively compress feature dimensions but are prone to losing rich contextual information due to only focusing on local extreme values or global averages. To address these challenges, we propose a new framework called MED-Net, which contains multiple visual encoding strategies and Manhattan distance-based pooling operations. This design makes full use of different encoding strategies and helps to extract comprehensive visual features. In addition, the proposed Manhattan-distance pooling uses reparameterized sorting and linear rank weighting to improve the contextual expression ability of the network without additional learnable parameters. Comprehensive experiments on three public benchmark datasets, BUSI, GlaS, and ISIC2017, show that our approach consistently outperforms the state-of-the-art methods on multiple evaluation metrics, demonstrating its robustness and effectiveness in addressing key segmentation challenges. For reproduction, the implementation codes can be checked out at https://github.com/szz2025/MED-Net.
 
 
 
 ## 1. Overview
 
 <div align="center">
-<img src="Figs/SCMC-Net.png" />
+<img src="Figs/MED-Net.png" />
 </div>
 
 
@@ -19,8 +19,8 @@ Due to scale variation, fuzzy boundaries, and hair interference, achieving preci
 The environment installation process can be carried out as follows:
 
 ```
-conda create -n SCMC-Net python=3.8
-conda activate SCMC-Net
+conda create -n MED-Net python=3.8
+conda activate MED-Net
 pip install torch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 
 pip install packaging
 pip install timm==0.4.12
@@ -61,10 +61,37 @@ You can refer to [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-
   - mask_train.npy
   - mask_val.npy
   - mask_test.npy
+The resulted file structure is as follows. 
+MED
+├── inputs
+│   ├── busi
+│     ├── images
+│           ├── malignant (1).png
+|           ├── ...
+|     ├── masks
+│        ├── 0
+│           ├── malignant (1)_mask.png
+|           ├── ...
+│   ├── GLAS
+│     ├── images
+│           ├── 0.png
+|           ├── ...
+|     ├── masks
+│        ├── 0
+│           ├── 0.png
+|           ├── ...
+│   ├── ISIC2017
+│     ├── images
+│           ├── 0.png
+|           ├── ...
+|     ├── masks
+│        ├── 0
+│           ├── 0.png
+|           ├── ...
 
 
 
-## 4. Train the SCMC-Net
+## 4. Train the MED-Net
 
 ```
 python train.py
@@ -72,7 +99,7 @@ python train.py
 
 
 
-## 5. Test the SCMC-Net 
+## 5. Test the MED-Net 
 
 First, in the test.py file, you should change the address of the checkpoint in 'resume_model'.
 
@@ -94,4 +121,4 @@ The performance of the proposed method is compared with the state-of-the-art mod
 
 ## 7. Acknowledgement
 
-Thanks to [Vim](https://github.com/hustvl/Vim), [VM-UNet](https://github.com/JCruan519/VM-UNet) and [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet) for their outstanding works.
+Thanks to [Vim](https://github.com/hustvl/Vim), [U-KAN](https://github.com/Zhaoyi-Yan/U-KAN) and [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet) for their outstanding works.
