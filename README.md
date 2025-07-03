@@ -61,7 +61,7 @@ You can refer to [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-
   - mask_train.npy
   - mask_val.npy
   - mask_test.npy
-The resulted file structure is as follows. 
+- The resulted file structure is as follows. 
 MED
 ├── inputs
 │   ├── busi
