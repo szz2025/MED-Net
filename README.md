@@ -30,6 +30,8 @@ pip install triton==2.0.0
 pip install causal_conv1d==1.0.0  
 pip install mamba_ssm==1.0.1
 pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs
+pip install addict dataclasses pandas pyyaml albumentations tqdm tensorboardX numpy opencv-python
+pip install perceptual pillow scipy tifffile typing-extensions yapf
 ```
 
 
