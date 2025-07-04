@@ -66,7 +66,7 @@ python val.py --name ${dataset}_UKAN --output_dir [YOUR_OUTPUT_DIR]
 
 ## 6. Comparison With State of the Arts
 
-The performance of the proposed method is compared with the state-of-the-art models on the ISIC2017, ISIC2018, and $\text{PH}^2$ datasets, with the top two results highlighted in red and blue, respectively.
+The performance of the proposed method is compared with the state-of-the-art models on the BUSI, GlaS, and ISIC2017 datasets, where the best results are shown in bold.
 
 <div align="center">
 <img src="Figs/Table1.png" />
