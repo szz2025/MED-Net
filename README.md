@@ -9,7 +9,7 @@ With the widespread application of the Kolmogorov-Arnold Network (KAN) framework
 ## 1. Overview
 
 <div align="center">
-<img src="Figs/MED-Net.jpg" />
+<img src="Figs/MED-Net .jpg" />
 </div>
 
 
