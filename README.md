@@ -51,17 +51,15 @@ ISIC2017: The dataset can be found [here](https://challenge.isic-archive.com/dat
 ## 4. Train the MED-Net
 
 ```
-python train.py
+python train.py --arch UKAN --dataset {dataset} --input_w {input_size} --input_h {input_size} --name {dataset}_UKAN  --data_dir [YOUR_DATA_DIR]
 ```
 
 
 
 ## 5. Test the MED-Net 
 
-First, in the test.py file, you should change the address of the checkpoint in 'resume_model'.
-
 ```
-python test.py
+python val.py --name ${dataset}_UKAN --output_dir [YOUR_OUTPUT_DIR] 
 ```
 
 
