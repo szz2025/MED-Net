@@ -36,30 +36,13 @@ pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs
 
 ## 3. Datasets
 
-You BUSI: The dataset can be found [here](https://github.com/wurenkai/UltraLight-VM-UNet) 
+BUSI: The dataset can be found [here](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset) 
 
-'./datasets/'
+Glas: The dataset can be found [here](https://websignon.warwick.ac.uk/origin/slogin?shire=https%3A%2F%2Fwarwick.ac.uk%2Fsitebuilder2%2Fshire-read&providerId=urn%3Awarwick.ac.uk%3Asitebuilder2%3Aread%3Aservice&target=https%3A%2F%2Fwarwick.ac.uk%2Ffac%2Fcross_fac%2Ftia%2Fdata%2Fglascontest&status=notloggedin) 
 
-- ISIC2017
-  - data_train.npy
-  - data_val.npy
-  - data_test.npy
-  - mask_train.npy
-  - mask_val.npy
-  - mask_test.npy
-- ISIC2018
-  - data_train.npy
-  - data_val.npy
-  - data_test.npy
-  - mask_train.npy
-  - mask_val.npy
-  - mask_test.npy
-- PH2
-  - data_train.npy
-  - data_val.npy
-  - data_test.npy
-  - mask_train.npy
-  BUSI: The dataset can be found 
+ISIC2017: The dataset can be found [here](https://challenge.isic-archive.com/data/) 
+
+
 
 
 
@@ -93,4 +76,4 @@ The performance of the proposed method is compared with the state-of-the-art mod
 
 ## 7. Acknowledgement
 
-Thanks to [Vim](https://github.com/hustvl/Vim), [U-KAN](https://github.com/Zhaoyi-Yan/U-KAN) and [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet) for their outstanding works.
+Thanks to [U-KAN](https://github.com/Zhaoyi-Yan/U-KAN) for their outstanding works.
