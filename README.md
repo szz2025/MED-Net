@@ -36,7 +36,7 @@ pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs
 
 ## 3. Datasets
 
-You can refer to [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet) for processing datasets, but for the division of the PH2 dataset, please run the Prepare_PH2.py we provide to divide the training set, validation set, and test set. Then organize the .npy file into the following format:
+You BUSI: The dataset can be found [here](https://github.com/wurenkai/UltraLight-VM-UNet) 
 
 './datasets/'
 
@@ -59,35 +59,7 @@ You can refer to [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-
   - data_val.npy
   - data_test.npy
   - mask_train.npy
-  - mask_val.npy
-  - mask_test.npy
-- The resulted file structure is as follows. 
-MED
-├── inputs
-│   ├── busi
-│     ├── images
-│           ├── malignant (1).png
-|           ├── ...
-|     ├── masks
-│        ├── 0
-│           ├── malignant (1)_mask.png
-|           ├── ...
-│   ├── GLAS
-│     ├── images
-│           ├── 0.png
-|           ├── ...
-|     ├── masks
-│        ├── 0
-│           ├── 0.png
-|           ├── ...
-│   ├── ISIC2017
-│     ├── images
-│           ├── 0.png
-|           ├── ...
-|     ├── masks
-│        ├── 0
-│           ├── 0.png
-|           ├── ...
+  BUSI: The dataset can be found 
 
 
 
